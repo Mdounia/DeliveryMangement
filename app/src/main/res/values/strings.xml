@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Delivery Management</string>
+    <string name="email">Email address</string>
+    <string name="pwd">Password</string>
+    <string name="register">Sign up</string>
+    <string name="name">Full name</string>
+    <string name="phone">Phone number</string>
+    <string name="address">Address</string>
+    <string name="des">Description</string>
+    <string name="lenght">Lenght</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="width">Width</string>
+    <string name="add">Delivery address</string>
+    <string name="date">Delivery date</string>
+    <string name="myDel">My deliveries</string>
+    <string name="myProf">My profil</string>
+    <string name="img">Image</string>
+    <string name="upd">Update</string>
+    <string name="del">Delete</string>
+    <string name="fgtpwd">Forget Password</string>
+    <string name="time">Delivery time</string>
+    <string name="source">Source address</string>
+    <string name="ADD">Save delivery</string>
+    <string name="cancel">Cancel</string>
+</resources>

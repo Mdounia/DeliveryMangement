@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "404694625605",
+    "firebase_url": "https://deliverymang-44085-default-rtdb.firebaseio.com",
+    "project_id": "deliverymang-44085",
+    "storage_bucket": "deliverymang-44085.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404694625605:android:b326ad14ad1f059e0f622c",
+        "android_client_info": {
+          "package_name": "com.example.deliverymanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404694625605-gu3hsshl4i20lenhpb3lnqtvm8kln867.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH4LEvDiOrC9fdg03lORDfxhuU_eDRDls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404694625605-gu3hsshl4i20lenhpb3lnqtvm8kln867.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
