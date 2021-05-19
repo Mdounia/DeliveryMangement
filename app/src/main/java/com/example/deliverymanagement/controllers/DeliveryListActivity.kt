@@ -12,7 +12,6 @@ import android.view.ViewGroup
 import android.widget.*
 import com.example.deliverymanagement.R
 import com.example.deliverymanagement.models.Delivery
-import com.example.deliverymanagement.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
@@ -43,7 +42,7 @@ class DeliveryListActivity : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 deliveries.clear()
                 for (postSnapshot in dataSnapshot.children) {
-                    //getting artist
+                    //getting delivery
                     val td: Map<String, Object> = postSnapshot.getValue() as HashMap<String, Object>
                     val delivery= Delivery(
                         td.get("delId").toString(),
@@ -62,7 +61,6 @@ class DeliveryListActivity : AppCompatActivity() {
                     if(delivery.userId==firebaseUser.uid){
                         deliveries.add(delivery)
                         val adapter = DeliveryListActivity.CustomizedAdapter(applicationContext, deliveries)
-                        //adapter = ArrayAdapter(applicationContext, android.R.layout.simple_list_item_1, users)
                         listDel.adapter = adapter
                     }
                 }
@@ -175,14 +173,14 @@ class DeliveryListActivity : AppCompatActivity() {
     ) {
         val dateAdd:Date=fmt.parse(deliveryDate)
         if(System.currentTimeMillis() > dateAdd.getTime()){
-            Toast.makeText(applicationContext, "You cant update nor delete", Toast.LENGTH_LONG).show();
+            Toast.makeText(applicationContext, "You cant update nor delete ,its too late", Toast.LENGTH_LONG).show();
         }else{
 
             val dialogBuilder: AlertDialog.Builder = AlertDialog.Builder(this)
             val inflater = layoutInflater
             val dialogView: View = inflater.inflate(R.layout.update_delete_delivery_dialog, null)
             dialogBuilder.setView(dialogView)
-            val editTextDes = dialogView.findViewById<View>(R.id.des1) as EditText
+            val editTextDes = dialogView.findViewById<View>(R.id.name) as EditText
             val editTextHeight= dialogView.findViewById<View>(R.id.height1) as EditText
             val editTextWidth = dialogView.findViewById<View>(R.id.width1) as EditText
             val editTextLenght =dialogView.findViewById<View>(R.id.lenght1) as EditText

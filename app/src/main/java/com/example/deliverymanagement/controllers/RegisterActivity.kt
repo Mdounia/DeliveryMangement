@@ -33,7 +33,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         firebaseAuth= FirebaseAuth.getInstance()
-        name=findViewById(R.id.des1)
+        name=findViewById(R.id.name)
         email=findViewById(R.id.email_lg)
         password=findViewById(R.id.password)
         phoneNumber=findViewById(R.id.phoneNumber)
@@ -66,6 +66,7 @@ class RegisterActivity : AppCompatActivity() {
                         if(it.isSuccessful){
                             val source = Intent(applicationContext, LoginActivity::class.java)
                             startActivity(source)
+                            finish()
                         }else{
                             Toast.makeText(applicationContext, "error!!!", Toast.LENGTH_LONG).show()
                         }

@@ -19,7 +19,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/des1"
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="71dp"
                     android:layout_gravity="center"

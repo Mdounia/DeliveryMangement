@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DeliveryManagement">
-        <activity android:name=".controllers.DeliveryDetailsActivity"></activity>
+        <activity android:name=".controllers.AdminActivity"></activity>
+        <activity android:name=".controllers.ForgetPasswordActivity" />
+        <activity android:name=".controllers.ProfilActivity" />
+        <activity android:name=".controllers.DeliveryDetailsActivity" />
         <activity android:name=".controllers.UsersDetailsActivity" />
         <activity android:name=".controllers.UsersListActivity" />
         <activity android:name=".controllers.DeliveryListActivity" />

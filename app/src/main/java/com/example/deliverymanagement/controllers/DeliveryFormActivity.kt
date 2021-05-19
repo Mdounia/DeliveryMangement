@@ -35,6 +35,7 @@ class DeliveryFormActivity : AppCompatActivity() {
     lateinit var back: FloatingActionButton
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var firebaseUser: FirebaseUser
+    var fmt: SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
 
 
 
@@ -81,7 +82,10 @@ class DeliveryFormActivity : AppCompatActivity() {
                             deliveryTime.text.toString(),
                             firebaseUser.uid
                     )
-
+                    val dateAdd:Date=fmt.parse(deliveryDate.text.toString())
+                    if(System.currentTimeMillis() > dateAdd.getTime()){
+                        Toast.makeText(applicationContext, "You cant update nor delete ,its too late", Toast.LENGTH_LONG).show();
+                    }else{
                     myRef.child((id)).setValue(d).addOnSuccessListener {
                         Toast.makeText(applicationContext, "Success", Toast.LENGTH_LONG).show()
                         var intent = Intent(applicationContext, DeliveryListActivity::class.java)
@@ -89,6 +93,7 @@ class DeliveryFormActivity : AppCompatActivity() {
                         finish()
                     }.addOnFailureListener {
                         Toast.makeText(applicationContext, it.message, Toast.LENGTH_LONG).show()
+                    }
                     }
                 }
 

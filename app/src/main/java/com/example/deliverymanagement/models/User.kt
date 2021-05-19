@@ -1,5 +1,7 @@
 package com.example.deliverymanagement.models
 
+import java.io.Serializable
+
 class User(
     var userId:String,
     var name : String,
@@ -9,6 +11,6 @@ class User(
     var address: String,
     var img : String
 
-) {
+): Serializable {
 
 }

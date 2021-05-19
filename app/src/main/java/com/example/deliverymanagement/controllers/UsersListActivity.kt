@@ -37,7 +37,7 @@ class UsersListActivity : AppCompatActivity() {
                     //getting artist
                     val td: Map<String, Object> = postSnapshot.getValue() as HashMap<String, Object>
                     val user = User(
-                        td.get("id").toString(),
+                        td.get("userId").toString(),
                         td.get("name").toString(),
                         td.get("email").toString(),
                         td.get(
@@ -80,4 +80,6 @@ class UsersListActivity : AppCompatActivity() {
         }
 
     }
+
+
 }

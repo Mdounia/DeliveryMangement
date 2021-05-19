@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.deliverymanagement.R
+import com.example.deliverymanagement.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -19,9 +20,8 @@ class LoginActivity : AppCompatActivity() {
     lateinit var signin: Button
     lateinit var database: FirebaseDatabase
     lateinit var myRef: DatabaseReference
-    lateinit var pwdFqt:TextView
+    lateinit var fgtPass:TextView
     lateinit var firebaseAuth:FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
         password=findViewById(R.id.pwd)
         signup=findViewById(R.id.signUp)
         signin=findViewById(R.id.signIn)
+        fgtPass=findViewById(R.id.fgtPass)
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Users")
         firebaseAuth= FirebaseAuth.getInstance()
@@ -48,14 +49,26 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        fgtPass.setOnClickListener {
+            val source = Intent(applicationContext, ForgetPasswordActivity::class.java)
+            startActivity(source)
+        }
+
     }
 
     private fun login(email: String, password: String) {
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
             if(it.isSuccessful){
-                val source = Intent(applicationContext, MainActivity::class.java)
-                startActivity(source)
-                finish()
+                if(email.equals("admin@gmail.com") && password.equals("admin123456")){
+                    val source = Intent(applicationContext, AdminActivity::class.java)
+                    startActivity(source)
+                    finish()
+                }else{
+                    val source = Intent(applicationContext, MainActivity::class.java)
+                    startActivity(source)
+                    finish()
+                }
+
             }else{
                 Toast.makeText(applicationContext, it.exception?.message, Toast.LENGTH_LONG).show()
 

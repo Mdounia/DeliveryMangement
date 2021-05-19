@@ -23,4 +23,6 @@
     <string name="source">Source address</string>
     <string name="ADD">Save delivery</string>
     <string name="cancel">Cancel</string>
+    <string name="send">Send Message</string>
+    <string name="reset">Reset Password</string>
 </resources>

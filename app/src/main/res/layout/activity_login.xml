@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="137dp"
             android:src="@drawable/putracetol180502430" />
     </LinearLayout>
 
@@ -41,7 +41,7 @@
             android:layout_height="71dp"
             android:layout_gravity="center"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="30dp"
             android:ems="10"
             android:gravity="center"
@@ -54,7 +54,7 @@
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="50dp"
             android:gravity="center"
             android:text="Sign in"
@@ -71,6 +71,18 @@
             android:gravity="center"
             android:text="@string/register"
             app:backgroundTint="@android:color/holo_green_dark" />
+
+        <TextView
+            android:id="@+id/fgtPass"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:ems="10"
+            android:gravity="center"
+            android:text="Forgotten Password"
+            android:textSize="15sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>
