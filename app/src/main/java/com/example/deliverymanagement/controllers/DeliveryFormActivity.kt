@@ -84,7 +84,7 @@ class DeliveryFormActivity : AppCompatActivity() {
                     )
                     val dateAdd:Date=fmt.parse(deliveryDate.text.toString())
                     if(System.currentTimeMillis() > dateAdd.getTime()){
-                        Toast.makeText(applicationContext, "You cant update nor delete ,its too late", Toast.LENGTH_LONG).show();
+                        Toast.makeText(applicationContext, "this day is impossible  ,choose another day", Toast.LENGTH_LONG).show();
                     }else{
                     myRef.child((id)).setValue(d).addOnSuccessListener {
                         Toast.makeText(applicationContext, "Success", Toast.LENGTH_LONG).show()

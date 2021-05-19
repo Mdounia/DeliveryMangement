@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context=".controllers.MainActivity">
 
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        app:backgroundTint="@color/design_default_color_error" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,11 +21,25 @@
         android:orientation="vertical"
         tools:context=".controllers.AdminActivity">
 
+        <TextView
+            android:id="@+id/dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:background="@android:color/holo_blue_light"
+            android:ems="10"
+            android:gravity="center"
+            android:text="Dashboard"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="323dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="50sp"
+            android:layout_margin="30sp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -81,5 +102,6 @@
 
             </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

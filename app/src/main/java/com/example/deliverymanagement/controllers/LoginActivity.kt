@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
         signin=findViewById(R.id.signIn)
         fgtPass=findViewById(R.id.fgtPass)
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Users")
+        myRef = database.getReference("users")
         firebaseAuth= FirebaseAuth.getInstance()
 
         signup.setOnClickListener {
