@@ -131,25 +131,24 @@ class UsersListActivity : AppCompatActivity() {
                         deliveries.add(delivery)
                     }
                 }
-
+                if(deliveries.isNullOrEmpty()) {
+                    //deleting delivery
+                    myRef.removeValue()
+                    Toast.makeText(getApplicationContext(), "user deleted", Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(getApplicationContext(), "You cant delete this user ,he still has deliveries", Toast.LENGTH_LONG).show();
+                }
 
             }
+
 
 
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
         })
-        if(deliveries.isNullOrEmpty()) {
-            //deleting delivery
-            myRef.removeValue()
-            Toast.makeText(getApplicationContext(), "user deleted", Toast.LENGTH_LONG).show();
-            return true;
-        }else {
-            Toast.makeText(getApplicationContext(), "You cant delete this user ,he still has deliveries", Toast.LENGTH_LONG).show();
-            return false
-        }
 
+    return true
     }
 
 

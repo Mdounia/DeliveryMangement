@@ -22,5 +22,9 @@ class AdminActivity : AppCompatActivity() {
             val source = Intent(applicationContext, UsersListActivity::class.java)
             startActivity(source)
         }
+        deliveries.setOnClickListener{
+            val source = Intent(applicationContext, DeliveryListAdminActivity::class.java)
+            startActivity(source)
+        }
     }
 }

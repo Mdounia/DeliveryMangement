@@ -82,11 +82,15 @@ class ProfileUpdateActivity : AppCompatActivity() {
                                 val user: User =
                                     User(firebaseUser.uid, name,user.email ,user.password, phoneNumber, address, user.img)
                                 myRef.setValue(user);
+                                val source = Intent(applicationContext, MainActivity::class.java)
+                                startActivity(source)
+                                finish()
                                 Toast.makeText(
                                     getApplicationContext(),
                                     "Profile Updated",
                                     Toast.LENGTH_LONG
                                 ).show();
+
                             } else {
                                 Toast.makeText(
                                     applicationContext,

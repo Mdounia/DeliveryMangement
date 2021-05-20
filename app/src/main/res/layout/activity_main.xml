@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="103dp"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:text="Logout"
         app:backgroundTint="@color/design_default_color_error" />
@@ -73,7 +73,7 @@
             android:layout_width="323dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="50sp"
+            android:layout_margin="15sp"
             android:gravity="center"
             android:orientation="vertical">
 
